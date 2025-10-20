@@ -1,0 +1,26 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "debug": false,
+    "cors_allow_origins": ["*"]
+  },
+  "database": {
+    "url": "postgresql://postgres:Xjg9nN0uahkkKS4l@db.wpgqmzfuvsnvqfqghvfl.supabase.co:5432/postgres"
+  },
+  "api": {
+    "base_prefix": "/api",
+    "default_limit": 100,
+    "max_limit": 1000,
+    "expose_tables": [
+      "ref_codes","vehicle_categories","customers","vehicles","toll_gates",
+      "transits","plate_recognitions","toll_rates","payment_methods","payments",
+      "fines","billing_records","debts","events","log_entries",
+      "users","roles","permissions","user_roles","role_permissions",
+      "user_denied_permissions","refresh_tokens","audit_log","services"
+    ],
+    "read_only_tables": [],
+    "log_sql": false,
+    "docs": { "enabled": true, "title": "Tolling API", "version": "1.0.0", "docs_path": "/docs" }
+  }
+}
